@@ -1,6 +1,31 @@
 import "./styles.css";
 
 const onClickAdd = () => {
-    alert();
-}
+  const inputText = document.getElementById("add-text").value;
+  document.getElementById("add-text").value = "";
 
+  const div = document.createElement("div");
+  div.className = "list-row";
+
+  const li = document.createElement("li");
+
+  const p = document.createElement("p");
+  p.innerText = inputText;
+
+  const completeButton = document.createElement("button");
+  completeButton.innerText = "完了";
+
+  const deleteButton = document.createElement("button");
+  deleteButton.innerText = "削除";
+
+  div.appendChild(li);
+  div.appendChild(p);
+  div.appendChild(completeButton);
+  div.appendChild(deleteButton);
+
+  document.getElementById("incomplete-list").appendChild(div);
+};
+
+document
+  .getElementById("add-button")
+  .addEventListener("click", () => onClickAdd());
