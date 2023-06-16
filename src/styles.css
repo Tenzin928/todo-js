@@ -1,6 +1,6 @@
 body {
   font-family: sans-serif;
-  background-color: #19331f;
+  background-color: #fef6e4;
 }
 
 input {
@@ -11,19 +11,21 @@ input {
 }
 
 button {
+  background-color: #fef6e4;
+  color: #001858;
   border-radius: 16px;
   border: none;
   padding: 4px 16px;
 }
 
 button:hover {
-  background-color: #dfbe7e;
-  color: #f4f5f5;
+  background-color: #f582ae;
+  color: #fef6e4;
   cursor: pointer;
 }
 
 .input-area {
-  background-color: #f4f5f5;
+  background-color: #74cdd8;
   width: 400px;
   height: 30px;
   padding: 8px;
@@ -32,7 +34,7 @@ button:hover {
 }
 
 .imcomprete-area {
-  background-color: #25d3ad;
+  background-color: #8bd3dd;
   width: 400px;
   min-height: 200px;
   padding: 8px;
@@ -41,7 +43,7 @@ button:hover {
 }
 
 .compreted-area {
-  background-color: #dfbe7e;
+  background-color: #f3d2c1;
   width: 400px;
   min-height: 200px;
   padding: 8px;
@@ -53,7 +55,7 @@ button:hover {
   text-align: center;
   margin-top: 0;
   font-weight: bold;
-  color: #142217;
+  color: #172c66;
 }
 
 .list-row {
