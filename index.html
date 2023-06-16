@@ -11,24 +11,29 @@
 		<input placeholder="TODOを入力" />
 		<button>追加</button>
 	</div>
-	<div class="incomprete-area">
-		<p>未完了のTODO</p>
-		<div>
+	<div class="imcomprete-area">
+		<p class="title">未完了のTODO</p>
 			<ul>
-				<li>TODOです</li>
+				<li>
+		<div class="list-row">
+			<p class="list-name">TODOです</p>
 				<button>完了</button>
 				<button>削除</button>
-			</ul>
 		</div>
+		</li>
+			</ul>
 	</div>
 	<div class="compreted-area">
-		<p>完了したTODO</p>
-		<div>
+		<p class="title">完了したTODO</p>
 			<ul>
-				<li>TODOでした</li>
+				<li>
+
+				<div class="list-row">
+					<p class="list-name">TODOでした</p>
 				<button>戻す</button>
-			</ul>
 		</div>
+		</li>
+			</ul>
 	</div>
 	<script src="src/index.js">
 	</script>
