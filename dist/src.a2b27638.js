@@ -184,15 +184,34 @@ var onClickAdd = function onClickAdd() {
   var li = document.createElement("li");
   var p = document.createElement("p");
   p.innerText = inputText;
+  p.className = "list-name";
   var completeButton = document.createElement("button");
   completeButton.innerText = "完了";
+  console.log(completeButton.parentNode);
+  completeButton.addEventListener("click", function () {
+    console.log(completeButton.parentNode);
+    var completeTarget = completeButton.parentNode.parentNode;
+    var returnButton = document.createElement("Button");
+    returnButton.innerText = "戻す";
+    div.appendChild(returnButton);
+    div.removeChild(completeButton);
+    div.removeChild(deleteButton);
+    document.getElementById("compreted-list").appendChild(completeTarget);
+    deleteFromIncomplete(completeTarget);
+  });
   var deleteButton = document.createElement("button");
   deleteButton.innerText = "削除";
-  div.appendChild(li);
+  deleteButton.addEventListener("click", function () {
+    deleteFromIncomplete(deleteButton.parentNode.parentNode);
+  });
   div.appendChild(p);
   div.appendChild(completeButton);
   div.appendChild(deleteButton);
-  document.getElementById("incomplete-list").appendChild(div);
+  li.appendChild(div);
+  document.getElementById("incomplete-list").appendChild(li);
+};
+var deleteFromIncomplete = function deleteFromIncomplete(target) {
+  document.getElementById("incomplete-list").removeChild(target);
 };
 document.getElementById("add-button").addEventListener("click", function () {
   return onClickAdd();
@@ -222,7 +241,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "38453" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "33579" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
