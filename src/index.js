@@ -16,13 +16,12 @@ const onClickAdd = () => {
   const completeButton = document.createElement("button");
   completeButton.innerText = "完了";
 
-  console.log(completeButton.parentNode);
-
   completeButton.addEventListener("click", () => {
-    console.log(completeButton.parentNode);
     const completeTarget = completeButton.parentNode.parentNode;
+
     const returnButton = document.createElement("Button");
     returnButton.innerText = "戻す";
+
     div.appendChild(returnButton);
     div.removeChild(completeButton);
     div.removeChild(deleteButton);

@@ -187,9 +187,7 @@ var onClickAdd = function onClickAdd() {
   p.className = "list-name";
   var completeButton = document.createElement("button");
   completeButton.innerText = "完了";
-  console.log(completeButton.parentNode);
   completeButton.addEventListener("click", function () {
-    console.log(completeButton.parentNode);
     var completeTarget = completeButton.parentNode.parentNode;
     var returnButton = document.createElement("Button");
     returnButton.innerText = "戻す";
