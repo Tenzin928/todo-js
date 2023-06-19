@@ -22,6 +22,17 @@ const onClickAdd = () => {
     const returnButton = document.createElement("Button");
     returnButton.innerText = "戻す";
 
+    returnButton.addEventListener("click", () => {
+      const deleteTarget = returnButton.parentNode.parentNode;
+
+      div.appendChild(completeButton);
+      div.appendChild(deleteButton);
+      div.removeChild(returnButton);
+
+      document.getElementById("incomplete-list").appendChild(deleteTarget);
+
+    });
+
     div.appendChild(returnButton);
     div.removeChild(completeButton);
     div.removeChild(deleteButton);

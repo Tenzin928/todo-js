@@ -191,6 +191,13 @@ var onClickAdd = function onClickAdd() {
     var completeTarget = completeButton.parentNode.parentNode;
     var returnButton = document.createElement("Button");
     returnButton.innerText = "戻す";
+    returnButton.addEventListener("click", function () {
+      var deleteTarget = returnButton.parentNode.parentNode;
+      div.appendChild(completeButton);
+      div.appendChild(deleteButton);
+      div.removeChild(returnButton);
+      document.getElementById("incomplete-list").appendChild(deleteTarget);
+    });
     div.appendChild(returnButton);
     div.removeChild(completeButton);
     div.removeChild(deleteButton);
